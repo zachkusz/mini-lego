@@ -1,0 +1,21 @@
+{
+  "name": "lego-architect",
+  "version": "1.0.0",
+  "description": "keep track of all the little itty bitty lego pieces you own",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "node",
+    "sql",
+    "handlebars"
+  ],
+  "author": "Zach Kusz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0"
+  }
+}
