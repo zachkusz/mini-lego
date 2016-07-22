@@ -1,0 +1,51 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/*Main Content*/
+/*Home/Landing Page*/
+main {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.bones {
+  flex: 1 0 auto;
+  hieght: 500px;
+  width: 500px;
+}
+
+/*Nav Bar*/
+nav {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  hieght: 80px;
+}
+
+.nav {
+  flex: 1 0 auto;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+/*Footer*/
+footer {
+  width: 100%;
+  hieght: 120px;
+}
+
+/*Generic Elements*/
+h1 {
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+a:hover {
+  color: red;
+}
