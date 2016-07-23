@@ -12,8 +12,12 @@ app.get('/', function (req, res) {
     res.render('index'); //automaticly looks for .handlebars extension
 });
 
+app.get('/browse/', function (req, res) {
+  res.render('browse');
+});
+
 // Serve back static files
-//app.use(express.static(path.join(__dirname, '/public'))); primes way
+//app.use(express.static(path.join(__dirname, '/public')));// primes way
 app.use('/public', express.static('public')); //tutorial way
 
 //set port and listen
