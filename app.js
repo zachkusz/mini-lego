@@ -1,8 +1,12 @@
 'use strict';
 
 var express = require('express');
-var app = express();
+var path = require('path');
 var exphbs  = require('express-handlebars');
+var bodyParser = require('body-parser');
+var mongoose = require('mongoose'); //youtube guy also required mongodb why?
+
+var app = express();
 
 //handlebar stuffs
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
