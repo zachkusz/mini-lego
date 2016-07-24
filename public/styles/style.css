@@ -7,14 +7,17 @@ body {
 /*Main Content*/
 /*Home/Landing Page*/
 main {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
 }
 
 .bones {
   flex: 1 0 auto;
-  hieght: 500px;
-  width: 500px;
+  background-color: #F5F5F5;
+  border-radius: 5px;
+  box-shadow: 0 0 4px #B0B0B0;
+  margin: 15px 10px 15px 10px;
+  padding: 5px;
 }
 
 /*Nav Bar*/
@@ -23,29 +26,50 @@ nav {
   justify-content: center;
   width: 100%;
   hieght: 80px;
+  background-color: #ED0511;
 }
 
 .nav {
   flex: 1 0 auto;
   justify-content: center;
   border: 1px solid black;
+  font-size: 1.5em;
 }
 
 /*Footer*/
 footer {
+  display: inline-flex;
+  justify-content: center;
   width: 100%;
-  hieght: 120px;
+  hieght: 80px;
+  background-color: #ED0511;
 }
 
 /*Generic Elements*/
 h1 {
+  font-size: 2em;
   font-style: italic;
 }
 
 a {
   text-decoration: none;
-  color: blue;
+  text-shadow: 0 0 4px white;
+  color: black;
 }
 a:hover {
-  color: red;
+  color: blue;
+}
+
+.button {
+  height: 30px;
+  width: 150px;
+  background-color: #E65411;
+  color: white;
+  border-radius: 10px;
+  font-size: 0.90em;
+}
+
+.button:hover {
+  background-color: white;
+  color: #E65411;
 }
