@@ -12,3 +12,15 @@
 <h5>Link to some youtube videos I guess</h5>
 
 <h3>The factory says {[{message}]}</h3>
+
+<h3>Add Your Own Mini-Lego Idea!</h3>
+
+<form>
+  <label for="submitType">Type (of submission. video, instructions, imagemacro, etc;): </label>
+  <input type="text" name="submitType" ng-model="submitType" />
+  <label for="submitTitle">Title: </label>
+  <input type="text" name="submitTitle" ng-model="submitTitle" />
+  <label for="submitUrl">Url Link for your submission: </label>
+  <input type="text" name="submitUrl" ng-model="submitUrl" />
+  <button class="button" ng-click="submitIdea()">Submit Idea</button>
+</form>
