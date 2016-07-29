@@ -1,4 +1,19 @@
-<h2>Tutorials and Instructions</h2>
+<h2>Tutorials, Sets, and Instructions</h2>
+
+<h3>Search Sets</h3>
+<p>
+  Most online searches for 'mini' return countless pages of minifigures,
+  making it difficult to find mini-sets. To get around this use the 'minifig'
+  filter in your search!
+</p>
+
+<form class="bones">
+  <label for="filter">Filter Out Minifigs</label>
+  <input class="search" type="checkbox" name="filter" checked />
+  <label for="search">Set or MOC title or keywords:</label>
+  <input class="search" type="text" name="search" ng-model="searchTerm" />
+  <button class="button" ng-click="search(searchTerm)">Search</button>
+</form>
 
 <h3>Instruction Manuals</h3>
 <!-- put a dropdown list with sort categories here -->
@@ -11,12 +26,10 @@
 <h3>Videos</h3>
 <h5>Link to some youtube videos I guess</h5>
 
-<h3>The factory says {[{message}]}</h3>
-
 <h3>Add Your Own Mini-Lego Idea!</h3>
 
 <form class="bones">
-  <label for="submitType">Type (of submission. video, instructions, imagemacro, etc;): </label>
+  <label for="submitType">Type (video, instructions, pic): </label>
   <input type="text" name="submitType" ng-model="submitType" />
   <label for="submitTitle">Title: </label>
   <input type="text" name="submitTitle" ng-model="submitTitle" />

@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));// primes way
 //app.use('/public', express.static('public')); //tutorial way
 
 app.get('/', function (req, res) {
-  res.render('index'); //automaticly looks for .handlebars extension
+  res.render('index');
 });
 
 app.get('/browse/', function (req, res) {

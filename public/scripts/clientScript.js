@@ -27,6 +27,13 @@ function($scope, $http, $window, mainFactory) {
     return;
   }
 
+  $scope.search = function(search) {
+    console.log('you searched for ' + search);
+    $http.get('/rebrickable/search/' + search).then(function(res) {
+      console.log(res);
+    });
+  }
+
   function postIdea(thisIdea) {
     var idea = thisIdea;
     $http.post('/idea/', idea).then(function(res) {
