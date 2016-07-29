@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var ResourceSchema = new Schema({
   type: String,
-  user: String,
+  user: { type: String, default: 'anon' },
   title: String,
   url: String,
   featured: { type: Boolean, default: false }
@@ -12,7 +12,3 @@ var ResourceSchema = new Schema({
 var Resource = mongoose.model('Resource', ResourceSchema);
 
 module.exports = Resource;
-
-//add mongodbroute to app.js
-//add routes setup in app.js and maybe models somehow?
-//make basic submit form on clinetside

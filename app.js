@@ -4,8 +4,9 @@ var express = require('express');
 var path = require('path');
 var exphbs  = require('express-handlebars');
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose'); //youtube guy also required mongodb why?
+var mongoose = require('mongoose');
 var idea = require('./routes/idea');
+var rebrickable = require('./routes/rebrickable');
 
 var app = express();
 
@@ -43,6 +44,7 @@ app.get('/browse/', function (req, res) {
 });
 
 app.use('/idea', idea);
+app.use('/rebrickable/', rebrickable);
 
 //set port and listen
 app.set('port', process.env.PORT || 3000);
@@ -50,3 +52,7 @@ app.set('port', process.env.PORT || 3000);
 app.listen(app.get('port'), function() {
   console.log('Listening on port: ', app.get('port'));
 });
+
+
+//brickable API key!
+// HA5BBnZJvF
