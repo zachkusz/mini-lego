@@ -4,7 +4,7 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 var request = require('request');
-
+require('request').debug = true;
 var key = 'HA5BBnZJvF'; //rebrickable api key
 
 

@@ -15,6 +15,13 @@
   <button class="button" ng-click="search(searchTerm)">Search</button>
 </form>
 
+<section>
+  <div class="bones" ng-repeat="result in searchResults">
+    <p>{[{result.descr}]}</p>
+    <img ng-src="{[{result.img_url}]}" />
+  </div>
+</section>
+
 <h3>Instruction Manuals</h3>
 <!-- put a dropdown list with sort categories here -->
 <div class="bones">
