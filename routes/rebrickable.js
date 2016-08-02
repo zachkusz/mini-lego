@@ -5,8 +5,6 @@ var router = express.Router();
 var path = require('path');
 var request = require('request');
 require('request').debug = true;
-var key = 'HA5BBnZJvF'; //rebrickable api key
-
 
 //!!!test call to get one set - not a true search call!!!
 router.get('/search/:data', function(req, res) {
@@ -19,7 +17,7 @@ router.get('/search/:data', function(req, res) {
   };
 
   function callback(err, res, body) {
-    if (!err) {
+    if (res) {
       var info = JSON.parse(body);
       console.log(body);
     } else if (err) {
@@ -29,7 +27,29 @@ router.get('/search/:data', function(req, res) {
     }
   }
   request(options, callback);
+});
 
+//trying a new api
+router.get('/searchByName/:data', function(req, res) {
+  var search = req.params.data;
+  var options = {
+    url: 'http://brickset.com/api/v2.asmx',
+    apiKey: '94qE-3s9L-00lU',
+    //query: search,
+    method: 'checkKey'//,
+    //pageSize: 20
+  };
+
+  function callback(err, res, body) {
+    if (res) {
+      console.log(body);
+      return body;
+    } else if (err) {
+      console.log('error response from lego ' + err);
+      return err;
+    }
+  }
+  request(options, callback);
 });
 
 

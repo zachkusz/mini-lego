@@ -28,15 +28,14 @@ function($scope, $http, $window, mainFactory) {
   }
 
   $scope.search = function(search) {
-    clientSearch(search); //!!!!!!!!!!!!testfunction
+    setIdSearch(search); //!!!!!!!!!!!!testfunction
     console.log('you searched for ' + search);
     $http.get('/rebrickable/search/' + search).then(function(res) {
       console.log(res);
     });
   }
 
-  //!!!!!!!!!!testfunction
-  function clientSearch(search) {
+  function setIdSearch(search) {
     $http({
       method: 'get',
       url: 'https://rebrickable.com/api/search',
@@ -56,18 +55,6 @@ function($scope, $http, $window, mainFactory) {
       console.log($scope.searchResults);
     });
   }
-  //!!!!!!!!!
-// callback - Optional JSONP callback function name
-// type - Filter on only S=Sets, M=MOCs, P=Parts.
-// theme1 - Set Filter: Theme Level 1
-// theme2 - Set Filter: Theme Level 2
-// theme3 - Set Filter: Theme Level 3
-// min_pieces - Set Filter: List sets with >= this number of parts.
-// max_pieces - Set Filter: List sets with <= this number of parts.
-// min_year - Set Filter: List sets released >= this year.
-// max_year - Set Filter: List sets released <= this year.
-// part_type_id - Part Filter: Only list parts with this type/category ID.
-// part_color - Part Filter: Only list parts that appear in this color.
 
   function postIdea(thisIdea) {
     var idea = thisIdea;
@@ -75,5 +62,16 @@ function($scope, $http, $window, mainFactory) {
       console.log(res);
     });
   }
+
+  $scope.searchByName = function(search) {
+    $http.get('/rebrickable/searchByName/' + search).then(function(res){
+      console.log(res);
+    });
+  }
+
+  //94qE-3s9L-00lU   http://brickset.com/api/v2.asmx
+  //converts xml to json
+  //  var x2js = new X2JS();
+  //  var jsonObj = x2js.xml_str2json( response.data );
 
 }]);
