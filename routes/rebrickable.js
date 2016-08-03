@@ -16,17 +16,13 @@ router.get('/search/:data', function(req, res) {
     set_id: 'SDCC2015-2'
   };
 
-  function callback(err, res, body) {
-    if (res) {
-      var info = JSON.parse(body);
-      console.log(body);
+  request(options, function(error, response, body) {
+    if (response) {
+      res.send(response);
     } else if (err) {
-      console.log('error response from lego ' + err);
-    } else {
-      console.log('no error but no response???');
+      res.send(err);
     }
-  }
-  request(options, callback);
+  });
 });
 
 //trying a new api
